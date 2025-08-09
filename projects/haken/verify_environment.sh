@@ -1,4 +1,7 @@
 #!/bin/bash
+sed -i '' '1i\
+# Version: 1.0 (2025-08-09)\
+# Project Environment Validation Tool - Please do not modify directly.' verify_environment.sh
 
 # Project Environment Validation Tool
 echo "=== Environmental validation starts ==="
