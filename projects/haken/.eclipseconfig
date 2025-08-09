@@ -1,0 +1,5 @@
+cat > .eclipseconfig << EOF
+# Eclipse Configuration Lock
+REQUIRED_JDK=Temurin-8
+COMPILER_LEVEL=1.8
+EOF
