@@ -6,10 +6,34 @@ cat > projects/haken/README.md << EOF
 - **Main**: haken.Main
 
 ## Run method
-\`\`\`bash
-javac -d bin src/haken/*.java
-java -cp bin haken.Main
-\`\`\`
+   ```bash 
+   javac -d bin src/haken/*.java  
+   java -cp bin haken.Main
+   ```
+## Development Environment Preparation  
+
+### 1. Script Permissions Settings  
+    ```bash  
+    # Enter the project dirctory  
+    cd projects/haken  
+
+    # Grant execution permissions (only needs to be run once)  
+    chmod +x verify_environment.sh  
+
+    # Verify permissions  
+    ls -l verify_environment.sh  
+    # Should display: -rwxr-xr-x  
+    ```  
+
+### 2. Runtime Environment Check  
+    ```bash  
+    ./verify_environment.sh  
+    ```  
+
+### 3. Frequent Issues:  
+- **Permission denied**：forget to execute `chmod +x`  
+- **Command not found**：Not running in the directory where the script is located  
+- **Bad interpreter**：Possibly due to line break issues in the file.，run `dos2unix verify_environment.sh`  
 
 ## Development Environment Requirements
 
