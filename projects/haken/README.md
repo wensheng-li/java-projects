@@ -30,26 +30,26 @@ java -cp bin haken.Main
    → JRE home: /Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home
    ```
 
-3. Verify Environment:
-   ### Before the first time execution
-   1. Grant script execution permissions:
-      ```bash
-      chmod +x verify_environment.sh
-      ```
-   2. Run the verify script:
-      ```bash
-      ./verify_environment.sh
-      ```
-   ### Expected Output：
-   Display when successfully:
-   ```	
-   === Environmental validation starts ===
-   === Verification Results ===
-   JDK Path: /Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home
-   Java Version: openjdk version "1.8.0_382"
-   === Validation Passed ===
+3. Verify Environment:  
+   ### Before the first time execution  
+   1. Grant script execution permissions:  
+      ```bash  
+      chmod +x verify_environment.sh  
+      ```  
+   2. Run the verify script:  
+      ```bash  
+      ./verify_environment.sh  
+      ```  
+   ### Expected Output：  
+   Display when successfully:  
+   ```	 
+   === Environmental validation starts ===  
+   === Verification Results ===  
+   JDK Path: /Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home  
+   Java Version: openjdk version "1.8.0_382"  
+   === Validation Passed ===  
    
-   If it fails, it will prompt you with specific errors and repair suggestions.
+   If it fails, it will prompt you with specific errors and repair suggestions.  
 
-   Recommendation: Check project properties in Eclipse -> Java Compiler settings
+   Recommendation: Check project properties in Eclipse -> Java Compiler settings  
 EOF
