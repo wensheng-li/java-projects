@@ -1,0 +1,24 @@
+cat > .gitignore << EOF
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
+
+# Maven
+target/
+pom.xml.tag
+
+# Gradle
+build/
+.gradle/
+
+# IntelliJ
+.idea/
+*.iml
+
+# System files
+.DS_Store
+*.log
+*.tmp
+EOF
