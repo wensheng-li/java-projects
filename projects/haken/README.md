@@ -13,8 +13,8 @@ cat > projects/haken/README.md << EOF
 ## Development Environment Preparation  
 
 ### 1. Script Permissions Settings  
-    ```bash  
-    # Enter the project dirctory  
+    ```bash 
+    # Enter the project directory  
     cd projects/haken  
 
     # Grant execution permissions (only needs to be run once)  
@@ -26,7 +26,7 @@ cat > projects/haken/README.md << EOF
     ```  
 
 ### 2. Runtime Environment Check  
-    ```bash  
+    ```bash 
     ./verify_environment.sh  
     ```  
 
