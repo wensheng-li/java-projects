@@ -147,3 +147,6 @@ dispatch-system/
 ├── .gitignore # Git ignore rules  
 ├── pom.xml # Maven configurations  
 └── README.md # This doc
+
+## License
+This project is released under the [MIT License](LICENSE).  
