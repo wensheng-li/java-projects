@@ -17,7 +17,10 @@ import java.util.Arrays;
 import java.util.Base64;
 
 /**
- * ============= PasswordUtils ============= The utility class that contains the
+ * ============= 
+ * PasswordUtils
+ * ============= 
+ * The utility class that contains the
  * strategies of password management.
  * 
  */
