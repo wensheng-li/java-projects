@@ -56,4 +56,68 @@ public class Assignment {
 	public List<Employee> getAssginedEmployees() {
 		return assignedEmployees;
 	}
+
+	/**
+	 * Get the assignment ID
+	 * @return id
+	 */
+	public int getId() {
+		return id;
+	}
+
+	/**
+	 * Get the project name
+	 * @return project
+	 */
+	public String getProject() {
+		return project;
+	}
+
+	/**
+	 * Get the start date of the assignment
+	 * @return startDate
+	 */
+	public Date getStartDate() {
+		return startDate;
+	}
+
+	/**
+	 * Get the end date of the assignment
+	 * @return endDate
+	 */
+	public Date getEndDate() {
+		return endDate;
+	}
+
+	/**
+	 * Set the assignment ID
+	 * @param id 
+	 */
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	/**
+	 * Set the assignment name
+	 * @param project
+	 */
+	public void setProject(String project) {
+		this.project = project;
+	}
+
+	/**
+	 * Set the Start Date of the assignment
+	 * @param startDate
+	 */
+	public void setStartDate(Date startDate) {
+		this.startDate = startDate;
+	}
+
+	/**
+	 * Set the End Date of the assignment
+	 * @param endDate
+	 */
+	public void setEndDate(Date endDate) {
+		this.endDate = endDate;
+	}
 }
