@@ -144,7 +144,15 @@ public class User {
 	public Role getRole() {
 		return role;
 	}
-
+	
+	/**
+	 * Get the failed attempts number
+	 * @return failedAttempts
+	 */
+	public int getFailedAttempts() {
+		return failedAttempts;
+	}
+	
 	/**
 	 * Set the user name
 	 * 
