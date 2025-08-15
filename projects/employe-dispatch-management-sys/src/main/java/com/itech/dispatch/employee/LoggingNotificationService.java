@@ -13,9 +13,9 @@ package com.itech.dispatch.employee;
 import java.util.Date;
 
 /**
- * ==========================================
+ * ===============================================
  * Implementation of AssignmentNotificationService
- * ==========================================
+ * ===============================================
  */
 public class LoggingNotificationService implements AssignmentNotificationService {
 
