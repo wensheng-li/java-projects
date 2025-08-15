@@ -10,18 +10,16 @@
 
 package com.itech.dispatch.employee;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 // Assignment.java
 public class Assignment {
 	// Filters
-	private int id;
-	private String project;
-	private Date startDate;
-	private Date endDate;
-	private List<Employee> assignedEmployees = new ArrayList<>();
+	private final int id;
+	private final String project;
+	private final Date startDate;
+	private final Date endDate;
+	private Set<Employee> assignedEmployees = new HashSet<>();
 	
 	/**
 	 * Constructor Assignment
@@ -38,86 +36,56 @@ public class Assignment {
 		this.endDate = endDate;
 	}
 	
-	// Getters & Setters
-	/**
-	 * Add employee to the assignedEmployee list
-	 * 
-	 * @param employee
-	 */
+	// Add employee to the assignedEmployee set
 	public void addEmployee (Employee employee) {
 		assignedEmployees.add(employee);
 	}
 	
-	/**
-	 * Get assigned employee
-	 * 
-	 * @return assignedEmployees
-	 */
-	public List<Employee> getAssginedEmployees() {
-		return assignedEmployees;
+	// Remove the employee
+	public boolean removeEmployee(Employee employee) {
+		return assignedEmployees.remove(employee);
 	}
-
-	/**
-	 * Get the assignment ID
-	 * @return id
-	 */
+	
+	// Getters
 	public int getId() {
 		return id;
 	}
 
-	/**
-	 * Get the project name
-	 * @return project
-	 */
 	public String getProject() {
 		return project;
 	}
 
-	/**
-	 * Get the start date of the assignment
-	 * @return startDate
-	 */
 	public Date getStartDate() {
 		return startDate;
 	}
 
-	/**
-	 * Get the end date of the assignment
-	 * @return endDate
-	 */
 	public Date getEndDate() {
 		return endDate;
 	}
 
-	/**
-	 * Set the assignment ID
-	 * @param id 
-	 */
-	public void setId(int id) {
-		this.id = id;
+	public Set<Employee> getAssignedEmployees() {
+		return Collections.unmodifiableSet(assignedEmployees);
 	}
-
-	/**
-	 * Set the assignment name
-	 * @param project
-	 */
-	public void setProject(String project) {
-		this.project = project;
+	
+	// Calculate the assignment progress
+	public int calculateProgress () {
+		Date now = new Date();
+		if (now.before(startDate)) return 0;
+		if(now.after(endDate)) return 100;
+		
+		long totalDuration = endDate.getTime() - startDate.getTime();
+		long elapsed = now.getTime() - startDate.getTime();
+		
+		return (int) ((elapsed * 100) / totalDuration);
 	}
-
-	/**
-	 * Set the Start Date of the assignment
-	 * @param startDate
-	 */
-	public void setStartDate(Date startDate) {
-		this.startDate = startDate;
+	
+	// Check if assignment completed
+	public boolean isCompleted () {
+		return new Date().after(endDate);
 	}
-
-	/**
-	 * Set the End Date of the assignment
-	 * @param endDate
-	 */
-	public void setEndDate(Date endDate) {
-		this.endDate = endDate;
+	
+	@Override
+	public String toString() {
+		return project + " (" + assignedEmployees.size() + " employees)";
 	}
 }
