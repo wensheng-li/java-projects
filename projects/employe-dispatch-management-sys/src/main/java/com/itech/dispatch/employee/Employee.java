@@ -10,9 +10,12 @@
 
 package com.itech.dispatch.employee;
 
+import java.util.Objects;
+
 // Employe.java
 public class Employee {
 	private int id;
+	private String username;
 	private String name;
 	private String department;
 	private AssignmentStatus status;
@@ -24,26 +27,33 @@ public class Employee {
 	 * @param name
 	 * @param department
 	 */
-	public Employee(int id, String name, String department) {
+	public Employee(int id, String username, String name, String department) {
 		this.id = id;
+		this.username = username;
 		this.name = name;
 		this.department = department;
 		this.status = AssignmentStatus.PENDING;
 	}
 
-	// Getter & Setters
+	// Getters
 	/**
 	 * Get employee ID
-	 * 
 	 * @return id
 	 */
 	public int getId() {
 		return id;
 	}
+	
+	/**
+	 * Get username
+	 * @return username
+	 */
+	public String getUsername() {
+		return username;
+	}
 
 	/**
 	 * Get employee Name
-	 * 
 	 * @return name
 	 */
 	public String getName() {
@@ -52,7 +62,6 @@ public class Employee {
 
 	/**
 	 * Get employee department
-	 * 
 	 * @return department
 	 */
 	public String getdepartment() {
@@ -61,38 +70,10 @@ public class Employee {
 
 	/**
 	 * Get employee dispatch status
-	 * 
 	 * @return status
 	 */
 	public AssignmentStatus getStatus() {
 		return status;
-	}
-
-	/**
-	 * Set the employee ID
-	 * 
-	 * @param id
-	 */
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	/**
-	 * Set the employee name
-	 * 
-	 * @param name
-	 */
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	/**
-	 * Set the employee department
-	 * 
-	 * @param department セットする department
-	 */
-	public void setdepartment(String department) {
-		this.department = department;
 	}
 
 	/**
@@ -102,5 +83,23 @@ public class Employee {
 	 */
 	public void setStatus(AssignmentStatus status) {
 		this.status = status;
+	}
+	
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		Employee employee = (Employee) o;
+		return id == employee.id;
+	}
+	
+	@Override
+	public int hashCode () {
+		return Objects.hash(id);
+	}
+	
+	@Override
+	public String toString() {
+		return name + " (" + department + ")";
 	}
 }
