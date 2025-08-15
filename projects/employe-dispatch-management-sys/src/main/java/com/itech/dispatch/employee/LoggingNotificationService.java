@@ -33,7 +33,7 @@ public class LoggingNotificationService implements AssignmentNotificationService
 	}
 
 	@Override
-	public void notifyAllAssignmentCompleted(Employee employee) {
+	public void notifyAllAssignmentsCompleted(Employee employee) {
 		System.out.printf("[%s] All Assignment Completed: %s all the assigned assignments has been completed%n",
 				new Date(), employee.getName());
 	}
