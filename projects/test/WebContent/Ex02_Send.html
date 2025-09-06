@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ex02_Send</title>
+
+</head>
+<body>
+	<form action="Ex02_Rev.jsp" method="POST">
+		<table border = "1">
+			<tr>
+				<th>名前</th>
+				<td><input type="text" name="t1"></td>
+			</tr>
+			<tr>
+				<th>血液型</th>
+				<td>
+					A 	 <input type="radio" name="r1" value=A>
+					B   <input type="radio" name="r1" value=B>
+					O   <input type="radio" name="r1" value=O>
+					AB <input type="radio" name="r1" value=AB>
+				</td>
+			</tr>
+			<tr>
+				<!-- colspan: セルを横に結合←設定値はセルの個数(分の幅) -->
+				<!-- rowspan:セルを縦「たて」に結合 -->
+				<!-- align:セルの内容の配置指定 -->
+				<td colspan="2" align="right">
+					<input type="submit" value="送信">
+				</td>
+			</tr>
+		</table>
+		
+	</form>
+</body>
+</html>

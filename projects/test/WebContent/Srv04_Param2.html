@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Srv04_Param2</title>
+</head>
+<body>
+	<!-- 
+		HTMLのタグに属性を指定する場合
+			<タグ名 属性名="設定値">(ダブルクォーテーション)
+		または
+			<タグ名 属性名='設定値'>(シングルクォーテーション)
+		または
+			<タグ名 属性名=設定値>←HTML5以降で有効な記述(設定値の条件有)
+		
+		サーブレットで出力データとして記述する場合
+		println()の文字列としてしていするため
+			"<タグ名 属性名='設定値'>"の形式にちていたが、
+		エスケープシーケンス(¥)を使用する以下の記述も可能
+			"<タグ名 属性名=¥"設定値\">"
+	 -->
+	 <form action="Srv04_Param2" method="POST">
+	 	<table border="1">
+	 		<tr>
+	 			<th>t1</th>
+	 			<td>
+	 				<input type="text" name = "t1">
+	 			</td>
+	 		</tr>
+	 		<tr>
+	 			<th>t2</th>
+	 			<td>
+	 				<input type="text" name = "t2" value="abc">
+	 			</td>
+	 		</tr>
+	 		<tr>
+	 			<th>cb1</th>
+	 			<td>
+	 				<input type="checkbox" name = "cb1">
+	 			</td>
+	 		</tr>
+	 		<tr>
+	 			<th>cb2</th>
+	 			<td>
+	 				<input type="checkbox" name = "cb2" value ="aaa" checked>
+	 			</td>
+	 		</tr>
+	 		<tr>
+	 			<th>r1</th>
+	 			<td>
+	 				<input type="radio" name = "r1">
+	 				<input type="radio" name = "r1" checked>
+	 			</td>
+	 		</tr>
+	 		<tr>
+	 			<th>r2</th>
+	 			<td>
+	 				<input type="radio" name = "r2" value="r2_1">
+	 				<input type="radio" name = "r2" value="r2_2">
+	 			</td>
+	 		</tr>
+	 		<tr>
+	 			<th>sel1</th>
+	 			<td>
+	 				<select name="sel1">
+	 					<option>項目1</option>
+	 					<option selected>項目2</option>
+	 					<option>項目3</option>
+	 				</select>
+	 			</td>
+	 		</tr>
+	 		<tr>
+	 			<th>sel2</th>
+	 			<td>
+	 				<select name="sel2">
+	 					<option value="sel2_1">項目1</option>
+	 					<option value="sel2_2">項目2</option>
+	 					<option value="sel2_3" selected>項目3</option>
+	 				</select>
+	 			</td>
+	 		</tr>
+	 		<tr>
+	 			<th>ta1</th>
+	 			<td>
+	 				<textarea cols="20" rows="4" name="ta1">def</textarea>
+	 			</td>
+	 		</tr>
+	 		<tr>
+	 			<th>sub1</th>
+	 			<td>
+	 				<input type="submit" name="sub1" value="送信1">
+	 			</td>
+	 		</tr>
+	 		<tr>
+	 			<th>sub2</th>
+	 			<td>
+	 				<input type="submit" name="sub2" value="送信2">
+	 			</td>
+	 		</tr>
+	 	</table>
+	 </form>
+</body>
+</html>

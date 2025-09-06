@@ -1,0 +1,39 @@
+# Eclipse project files
+*.classpath
+*.project
+.settings/
+
+# Build output directories
+/bin/
+/build/
+/target/
+
+# Java compiled class files
+*.class
+
+# Web application archives
+*.war
+*.ear
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+*.swp
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE-specific files (e.g., IntelliJ)
+.idea/
+*.iml
+
+# Tomcat work directories (if applicable)
+*.tomcatwork/
+*.tomcat/
+
+# Environment or secret keys
+.env
+*.key
+*.pem
